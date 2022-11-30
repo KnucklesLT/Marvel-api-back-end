@@ -1,9 +1,5 @@
 import axios from "axios";
-import md5 from 'md5'
-
-const ts = new Date().getTime()
-const stringToHash = ts + process.env.PRIVATE_KEY + process.env.PUBLIC_KEY 
-const hash = md5(stringToHash)
+import { ts,hash } from "../middleware/apiHelper.js";
 
 const index = async (req,res) => {
   try {
