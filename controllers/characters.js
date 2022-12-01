@@ -1,9 +1,9 @@
 import axios from "axios";
-import { ts,hash } from "../middleware/apiHelper.js";
+import { ts, key, hash } from "../middleware/apiHelper.js";
 
 const index = async (req,res) => {
   try {
-    axios.get(`http://gateway.marvel.com/v1/public/characters?limit=100&apikey=${process.env.PUBLIC_KEY}&ts=${ts}&hash=${hash}`,
+    axios.get(`http://gateway.marvel.com/v1/public/characters?limit=100&apikey=${key}&ts=${ts}&hash=${hash}`,
     {
         headers: {
             'Accept-Encoding': 'application/json',
